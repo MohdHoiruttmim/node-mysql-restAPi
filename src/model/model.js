@@ -14,6 +14,7 @@ const { DataTypes } = Sequelize;
 const Book = connect.define('testbooks', {
   title: DataTypes.STRING,
   author: DataTypes.STRING,
+  isComplete: DataTypes.BOOLEAN,
   year: DataTypes.INTEGER,
 }, {
   timestamps: false, // for don't use createdAt and updatedAt coloumn

@@ -30,10 +30,16 @@ const deleteBookById = async (req, res) => {
 };
 
 const createNewBooklist = async (req, res) => {
-  const { title, author, year } = req.body;
+  const {
+    title,
+    author,
+    isComplete,
+    year,
+  } = req.body;
   const response = await Book.create({
     title,
     author,
+    isComplete,
     year,
   });
   if (response !== null) {
